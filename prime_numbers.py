@@ -20,7 +20,6 @@ for i in range(begin_number,end_number):
 sum_value = sum(arr_colection)
 product_value = numpy.prod(arr_colection)
 
-
 print (f'{str(len(arr_colection))} numbers found: \n {arr_colection}')
 print (f'\n the sum of the numbers: \n {sum_value}')
 print (f'\n the product of the numbers: \n {product_value}')

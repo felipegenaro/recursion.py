@@ -31,7 +31,7 @@ print(Recursive_Fibonacci_Sequence(9))
 def Fibonacci(fib_nums):
         a, b = 0, 1
         for j in xrange(0, fib_nums):
-                yield "{}: {}".format(j+1, a)   # yield = generator
+                yield "{}: {}".format(j+1, a)   # yield => generator
                 a, b = b, a + b
 
 # loop through the generator
@@ -40,10 +40,11 @@ for item in Fibonacci(11):
 
 
 
+
 # Simplified examples:
 
 # Iterative Implementation
-def iterative_fibonacci(fnum):
+def Iterative_Fibonacci(fnum):
         result = [0, 1]
 
         for i in range (2, fnum):

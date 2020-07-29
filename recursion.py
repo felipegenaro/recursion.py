@@ -1,11 +1,58 @@
+# Recursion
+
+def Func_R(a):
+        if a == 0:
+                return 0
+        else:
+                return Func_R(a - 1) + 1
+
+# Func_R(3) => 3
+# Recursion is LIFO - Last In Fisrt Out
+
+
+def Func_R_Explained(b):
+        print("Start: " + str(b))
+        res = 0
+
+        if b == 0:
+                res = 0
+        else:
+                res = Func_R_Explained(b - 1) + 1
+
+        print("End: " + str(b))
+        return res
+
+# Now you can see the Stack
+# Start: 3
+# Start: 2
+# Start: 1
+# Start: 0      -       Last In
+# End: 0        -       First Out
+# End: 1
+# End: 2
+# End: 3
+# 3
+
+
+def Func_R_Fail(c):
+        print("Start: " + str(c))
+        print("End: " + str(c))
+        return Func_R_Fail(c - 1) + 1
+
+# RecursionError: maximum recursion depth exceeded while calling a Python object
+# You get this error when you call the function about a thousand times
+# That will be the same as a While Loop without a reachable base case
+
+
+
 # Sum
 
 # Fail Implementation
-def Recursive_Sum(n):
+def Recursive_Sum_Fail(n):
         if (n > 100):
                 return n;
         else:
-                return (n + Recursive_Sum(n - 1))
+                return (n + Recursive_Sum_Fail(n - 1))
 
 
 # you always need a reachable Base Case
